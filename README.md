@@ -28,9 +28,11 @@
 
 ## 提交内容
 
-第一次提交请完整走完所有流程，之后请直接从 Step 2 做。
+第一次提交请完整走完所有流程，之后请跳过 Step 0 直接从 Step 1 做。
 
-### Step 1 clone项目
+如果你很确定自己在做什么，不一定非要严格按照流程走。
+
+### Step 0 clone项目
 
 安装 [Git](https://git-scm.com/)，自己找教程安装。
 
@@ -45,7 +47,7 @@ git clone git@github.com:x5plan/git-blog.git x5plan-git-blog      # 使用 ssh
 
 如果选用SSH，请自行生成 SSH key pair。
 
-### Step 2 拉取最新的 main 并创建自己的分支
+### Step 1 拉取最新的 main 并创建自己的分支
 
 进入 git repo 文件夹，切换到main分支并拉取最新的远程分支
 
@@ -65,7 +67,7 @@ git checkout -b user/<alias>/<branch name>
 
 注意，全**小写**，包括你的用户名，全部**小写**。
 
-### Step 3 写作并提交代码
+### Step 2 写作，提交，推送
 
 以创建 `Antares/2024/01/22/测试内容.md` 为例
 
@@ -79,13 +81,26 @@ git commit -m "update 测试内容.md"
 # -m 后为提交注释，随意填写但必须得有，几个简单的词描述一下做了啥即可
 ```
 
-### Step 4 推送并创建 PR
-
 将本地分支推送至远程：
 
 ```sh
 git push
 ```
 
+### Step 3 创建 PR
+
 打开 [x5plan/git-blog](https://github.com/x5plan/git-blog) ，选择 Pull requests，点击按钮 New pull request.
 
+base 选择 main，compare 选择你刚刚创建的分支名字，例如  `user/antares/first-commit`
+
+写一个具体的 title，description 按需写可以留空。
+
+点击 Create pull request
+
+等有人review 你的 change 后合并。
+
+### Step 4 解决问题（如果有需要）
+
+当其他人阅读你的PR后，会提交comment。
+
+请编辑你的文件解决问题，并重复 Step 2。
