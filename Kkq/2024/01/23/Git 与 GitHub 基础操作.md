@@ -30,7 +30,7 @@
 
 因为所有的信息都存储在中央服务器上，所以当中央服务器出现问题的时候就会出现进度停滞的情况。
 
-![image-20240122211051659](C:/Users/lenovo/Desktop/class-note/git%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0/assets/image-20240122211051659.png)
+![image-20240122211051659](./assets/image-20240122211051659.png)
 
 
 
