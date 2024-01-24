@@ -4,7 +4,16 @@
 
 个人目录（以字典序）：
 
+<<<<<<< HEAD
 - [KKQ公司](https://github.com/x5plan/git-blog/blob/user/houforever/first-commit/Kkq/index.md)
+=======
+
+
+
+- [Kkq](Kkq/index.md)
+
+
+>>>>>>> 39eda36383cb662b65b916a3262a1e0479669f83
 
 ## 文件命名格式
 
