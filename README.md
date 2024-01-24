@@ -4,6 +4,7 @@
 个人目录（以字典序）：
 
 - [Kkq](Kkq/index.md)
+- [Monazite](Monazite/index.md)
 
 
 ## 文件命名格式
