@@ -4,27 +4,18 @@
 
 个人目录（以字典序）：
 
-<<<<<<< HEAD
-- [KKQ公司](https://github.com/x5plan/git-blog/blob/user/houforever/first-commit/Kkq/index.md)
-=======
-
-
-
-- [Kkq](Kkq/index.md)
-
-
->>>>>>> 39eda36383cb662b65b916a3262a1e0479669f83
+- [Kkq](https://github.com/x5plan/git-blog/blob/main/Kkq/index.md)
 
 ## 文件命名格式
 
 请自行维护以下文件：
 
-- 文章
-  例：`<alias>/<year>/<month>/<date>/<title>.md``Antares/2024/01/22/测试内容.md`
-- 插图
-  例：`<alias>/<year>/<month>/<date>/images/<name>``Antares/2024/01/22/images/图例.jpg`
-- 目录
-  例：`<alias>/index.md``Antares/index.md`
+- 文章 `<alias>/<year>/<month>/<date>/<title>.md`
+  例：`Antares/2024/01/22/测试内容.md`
+- 插图 `<alias>/<year>/<month>/<date>/images/<name>`
+  例：`Antares/2024/01/22/images/图例.jpg`
+- 目录 `<alias>/index.md`
+  例：`Antares/index.md`
 
 ## 目录书写说明
 
@@ -88,17 +79,17 @@ git checkout -b user/<alias>/<branch name>
 
 
 
-例：`git checkout -b user/antares/first-commit`
+例： `git checkout -b user/antares/first-commit`
 
-注意，全小写，包括你的用户名，全部**小写**。
+注意，全**小写**，包括你的用户名，全部**小写**。
 
 ### Step 2 写作，提交，推送
 
-以创建 为例`Antares/2024/01/22/测试内容.md`
+以创建 `Antares/2024/01/22/测试内容.md` 为例
 
 首先创建对应的文件，并书写完成内容。可自由选择编辑器，推荐 VS Code 或 Typora。
 
-编辑完成后，Stage 你的文件并提交。
+编辑完成后，Stage 你的文件并commit。
 
 ```
 git add Antares/2024/01/22/测试内容.md
@@ -116,11 +107,11 @@ git push
 
 
 
-### 步骤 3 创建 PR
+### Step 3 创建 PR
 
 打开 [x5plan/git-blog](https://github.com/x5plan/git-blog) ，选择 Pull requests，点击按钮 New pull request.
 
-base 选择 main，compare 选择你刚刚创建的分支名字，例如`user/antares/first-commit`
+base 选择 main，compare 选择你刚刚创建的分支名字，例如 `user/antares/first-commit`
 
 写一个具体的 title，description 按需写可以留空。
 
