@@ -176,7 +176,7 @@ setTimeout(() => {
 
 `unhandledrejection` ：当`Promise` 被 `reject` 且没有 `reject 处理器`的时候，会触发 `unhandledrejection` 事件；这可能发生在 window 下。
 
-> ```tsx
+> ```js
 >   window.addEventListener("unhandledrejection", (event) => {
 >     _sendError({
 >       topic: "promise",
