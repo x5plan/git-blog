@@ -9,17 +9,17 @@
 
 在实际运用中，`state` 是通过这样的步骤运行的
 
-1. **组件进行第一次渲染。**此时传入 `useState` 的初始值作为 `state` 变量的值。
-2. **更新 `state` 。**当调用 `state setter` 函数时，会传入一个新的 `state` 值，`React` 现在记住新的值并进行下一步渲染。
-3. **组件的第二次渲染。** 此时 `useState` 的参数依然是初始值，但 `state setter `使 `React` 记住了新值，所以会返回 `[newState, stateSetter] `
+1. **组件进行第一次渲染。** 此时传入 `useState` 的初始值作为 `state` 变量的值。
+2. **更新 `state` 。** 当调用 `state setter` 函数时，会传入一个新的 `state` 值，`React` 现在记住新的值并进行下一步渲染。
+3. **组件的第二次渲染。** 此时 `useState` 的参数依然是初始值，但 `state setter`使 `React` 记住了新值，所以会返回 `[newState, stateSetter]`
 
-# 关于`UseState`的工作原理
+## 关于`UseState`的工作原理
 
-- 在 React 内部，为每个组件保存了一个数组，其中每一项都是一个 state 对。
-- 它维护当前 state 对的索引值，在渲染之前将其设置为 “0”。
-- 每次调用 useState 时，React 都会为你提供一个 state 对并增加索引值
+- 在 `React` 内部，为每个组件保存了一个数组，其中每一项都是一个 `state` 对。
+- 它维护当前 `state` 对的索引值，在渲染之前将其设置为 `0` 。
+- 每次调用 `useState` 时，`React`都会为你提供一个 `state` 对并增加索引值
 
-##  `useState` 调用，`state`初始化
+### `useState` 调用，`state`初始化
 
 ```js
 function Gallery() {
@@ -50,7 +50,7 @@ function useState(initialState) {
 
 依据传入的`initialState`进行初始化，在`componentHooks` 中存储`pair`，并更新`currentHookIndex`
 
-## 使用`setState`进行 `state` 的更新
+### 使用`setState`进行 `state` 的更新
 
 ```js
 let componentHooks = [];
@@ -81,7 +81,7 @@ function useState(initialState) {
 }
 ```
 
-## `DOM`的渲染
+### `DOM`的渲染
 
 ```js
 function updateDOM() {
@@ -91,14 +91,13 @@ function updateDOM() {
 
   // 更新 DOM 的具体代码省略
   //...
-
 ```
 
 **如果一个组件进行两次渲染，那么每个组件副本都会有独立的 `state`**
 
-# 渲染与提交
+## 渲染与提交
 
-## 渲染
+### 渲染
 
 组件被 `React` 渲染之后，显示到页面中。组件的渲染包括三个步骤：
 
@@ -112,10 +111,10 @@ function updateDOM() {
    - **对于初次渲染，** React 会创建的所有 DOM 节点放在屏幕上。
    - **对于重渲染，** React 将应用最少的必要操作，以使得 DOM 与最新的渲染输出相互匹配。
 
-## 渲染与 `state`
+### 渲染与 `state`
 
--  设置 `state` 会触发渲染，而渲染会产生一张快照。
-- 在一次渲染中，`state` 不会发生改变，`React `会使 `state` 的值始终”固定“在一次渲染的各个事件处理函数内部。
+- 设置 `state` 会触发渲染，而渲染会产生一张快照。
+- 在一次渲染中，`state` 不会发生改变，`React`会使 `state` 的值始终”固定“在一次渲染的各个事件处理函数内部。
 - `state` 改变是通过重新渲染实现的
 
 因此，对于重复的`setState`：
@@ -144,9 +143,9 @@ export default function Counter() {
 
 而多次的`setNumber` ，仅仅只是告知了三次`number`要加一，而非`number`要加三
 
-## 将多次更新加入队列
+### 将多次更新加入队列
 
-`setState(x) `实际上会像 `setState(n => x)` 一样运行
+`setState(x)`实际上会像 `setState(n => x)` 一样运行
 
 `setState`的参数实际感觉起来更像是一个回调
 
@@ -181,7 +180,7 @@ export default function Counter() {
 | `n => n + 1` | `1`  | `1 + 1 = 2` |
 | `n => n + 1` | `2`  | `2 + 1 = 3` |
 
-**总结：**
+**总结:**
 
 我们可以将两种内容传递给 `setNumber state` ：
 
