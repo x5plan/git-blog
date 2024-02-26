@@ -27,8 +27,7 @@ function Gallery() {
   const [index, setIndex] = useState(0);
   const [showMore, setShowMore] = useState(false);
   //...
-    
-}    
+}
 ```
 
 在 `useState` 内部
@@ -40,7 +39,7 @@ let currentHookIndex = 0;
 function useState(initialState) {
   let pair = componentHooks[currentHookIndex];
   //...
-  pair = [initialState, setState]
+  pair = [initialState, setState];
   //...
   componentHooks[currentHookIndex] = pair;
   currentHookIndex++;
@@ -66,8 +65,8 @@ function useState(initialState) {
   }
 
   pair = [initialState, setState];
-  
-  function setState(nextState){
+
+  function setState(nextState) {
     //将新的值放入pair
     pair[0] = nexxtState;
     //UpdateDom将currentHookIndex赋值为0，保证了每一次更新的state都在initialState序号为零的位置
@@ -126,15 +125,18 @@ export default function Counter() {
   return (
     <>
       <h1>{number}</h1>
-      <button onClick={() => {
-        setNumber(number + 1);
-        setNumber(number + 1);
-        setNumber(number + 1);
-      }}>+3</button>
+      <button
+        onClick={() => {
+          setNumber(number + 1);
+          setNumber(number + 1);
+          setNumber(number + 1);
+        }}
+      >
+        +3
+      </button>
     </>
-  )
+  );
 }
-
 ```
 
 此次渲染的`number`都是同一个值，多次调用`setNumber` 不会使`number+3`
@@ -158,13 +160,17 @@ export default function Counter() {
   return (
     <>
       <h1>{number}</h1>
-      <button onClick={() => {
-        setNumber(n => n + 1);
-        setNumber(n => n + 1);
-        setNumber(n => n + 1);
-      }}>+3</button>
+      <button
+        onClick={() => {
+          setNumber((n) => n + 1);
+          setNumber((n) => n + 1);
+          setNumber((n) => n + 1);
+        }}
+      >
+        +3
+      </button>
     </>
-  )
+  );
 }
 ```
 
@@ -174,11 +180,11 @@ export default function Counter() {
 2. `setNumber(n => n + 1)`：`n => n + 1` 是一个函数。React 将它加入队列。
 3. `setNumber(n => n + 1)`：`n => n + 1` 是一个函数。React 将它加入队列。
 
-| 更新队列     | `n`  | 返回值      |
-| ------------ | ---- | ----------- |
-| `n => n + 1` | `0`  | `0 + 1 = 1` |
-| `n => n + 1` | `1`  | `1 + 1 = 2` |
-| `n => n + 1` | `2`  | `2 + 1 = 3` |
+| 更新队列     | `n` | 返回值      |
+| ------------ | --- | ----------- |
+| `n => n + 1` | `0` | `0 + 1 = 1` |
+| `n => n + 1` | `1` | `1 + 1 = 2` |
+| `n => n + 1` | `2` | `2 + 1 = 3` |
 
 **总结:**
 
