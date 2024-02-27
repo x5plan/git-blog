@@ -1,4 +1,6 @@
-# React安装
+# React
+
+## React安装
 
 > 使用create-react-app
 
@@ -22,7 +24,7 @@ npm create vite@latest
 ? Project name: » vite-project
 #项目名称
 ? Select a framework: » - Use arrow-keys. Return to submit.
-	...
+ ...
     Vue
 >   React
     Preact
@@ -36,9 +38,9 @@ npm create vite@latest
 #选择需要的配置，SWC是将ES6语法转换为ES5语法的工具
 ```
 
-# React概览
+## React概览
 
-## 组件的创建与嵌套
+### 组件的创建与嵌套
 
 React 应用程序是由 **组件** 组成的。一个组件是 UI（用户界面）的一部分，它拥有自己的逻辑和外观。组件可以小到一个按钮，也可以大到整个页面。
 
@@ -50,8 +52,8 @@ import "./style.css"
 
 function MyButton(){
     //一些其他逻辑
-	return (
-    	<button>I'm a button</button>
+ return (
+     <button>I'm a button</button>
     )
 }
 ```
@@ -66,7 +68,7 @@ import MyButton from "目录"
 export default function MyApp(){
 //注意：必须将组件暴露出去，才可以在其他文件中导入该组件
     return (
-    	<div>
+     <div>
             <h1>My React App</h1>
             <MyButton />
         </div>
@@ -76,9 +78,9 @@ export default function MyApp(){
 
 React 组件必须以大写字母开头，而 HTML 标签则必须是小写字母。
 
-## JSX
+### JSX
 
-`React` 使用` JSX` 来替代常规的`JavaScript`
+`React` 使用`JSX` 来替代常规的`JavaScript`
 
 `JSX` 比 `HTML` 更加严格。你必须闭合标签，如 `<br />`。
 
@@ -88,14 +90,14 @@ React 组件必须以大写字母开头，而 HTML 标签则必须是小写字�
 function ExampleComponent(){
     return (
         <>
-        	<h1>Title</h1>
-        	<p>Something</p>
+         <h1>Title</h1>
+         <p>Something</p>
         </>
     );
 }
 ```
 
-## 添加样式
+### 添加样式
 
 在 `React` 中，为标签添加 `CSS` 的 `class` 需要使用 `className` ，其与 `HTML` 的 `class` 属性的工作方式相同
 
@@ -103,24 +105,24 @@ function ExampleComponent(){
 <img className='avatar' />
 ```
 
-## 显示数据
+### 显示数据
 
 在 `JSX` 中，函数组件最终会 `return` 一个标签，而如果想在标签内部嵌入 `JS` 代码，需要使用到大括号：`{}`
 
 ```jsx
 return (
-	<h1>
-    	{user.name}
+ <h1>
+     {user.name}
     </h1>
 );
 ```
 
-在标签上同样可以使用大括号将 `JSX` 属性转移到 `JavaScript` 
+在标签上同样可以使用大括号将 `JSX` 属性转移到 `JavaScript`
 
 ```jsx
 return (
-	<img
-    	className="avatar"
+ <img
+     className="avatar"
         src={user.imageUrl}
     />
 )
@@ -128,7 +130,7 @@ return (
 
 只要在大括号之内，就可以转义为 `JavaScript` 代码，从而更加灵活地实现代码逻辑
 
-**一个误区：**在某些时候 ，我们使用这种语法时会将某个对象转义为 `JavaScript` 代码
+**一个误区：** 在某些时候 ，我们使用这种语法时会将某个对象转义为 `JavaScript` 代码
 
 ```jsx
 <li
@@ -141,7 +143,7 @@ return (
 
 这样的语法并不是双大括号，而是在大括号内蕴含一个对象
 
-## 条件渲染
+### 条件渲染
 
 `React` 没有特殊的语法来编写条件语句，因此使用的就是普通的 JavaScript 代码。
 
@@ -161,7 +163,7 @@ return (
 
 例如 `if` 语句，三目运算符，甚至利用逻辑短路
 
-## 渲染列表
+### 渲染列表
 
 假设有一个产品数组：
 
@@ -187,11 +189,11 @@ return (
 );
 ```
 
-对于列表渲染，常常需要使用到 `key` 
+对于列表渲染，常常需要使用到 `key`
 
 对于列表中的每一个元素，都应该传递一个字符串或者数字给 `key`，用于在其兄弟节点中唯一标识该元素。
 
-## 响应事件
+### 响应事件
 
 可以在组件中声明**事件处理函数**来响应事件
 
@@ -209,7 +211,7 @@ function MyButton() {
 }
 ```
 
-## 响应式
+### 响应式
 
 在 `React` 中，使用 `state` 来进行某些属性的记录与更新
 
@@ -246,4 +248,4 @@ function MyButton() {
 </button>
 ```
 
-实际上，以 `use` 开头的函数被称为 **Hook**。`useState` 就是 React 提供的一个内置 Hook。
+实际上，以 `use` 开头的函数被称为 **Hook**。`useState` 就是 `React` 提供的一个内置 `Hook` 。
