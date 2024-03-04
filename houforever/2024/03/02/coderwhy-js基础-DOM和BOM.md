@@ -27,7 +27,7 @@ DOM Tree
 
 ​	继承同一个父类不代表两者互为兄弟
 
-![image-20240221224438940](.\coderwhy-js基础-DOM和BOM.assets\image-20240221224438940-17085266946941.png)
+![image-20240221224438940](./coderwhy-js基础-DOM和BOM.assets/image-20240221224438940-17085266946941.png)
 
 ```
 class Person {
@@ -43,7 +43,7 @@ class Student extends Person {
 }
 ```
 
-https://babeljs.io	将es6转换成es5
+<https://babeljs.io>	将es6转换成es5
 
 comment:注释
 
@@ -53,13 +53,13 @@ comment:注释
 
   - 网页的对象模型
 
-  - ![](.\coderwhy-js基础-DOM和BOM.assets\image-20240221231119192-17085282816352.png)
+  - ![](./coderwhy-js基础-DOM和BOM.assets/image-20240221231119192-17085282816352.png)
 
   - 两种方法
 
     - 获取节点的导航后,获取对应的节点
 
-      ![image-20240221231637622](D:\typora_note\coderwhy-js基础-DOM和BOM.assets\image-20240221231637622-17085285993803.png)
+      ![image-20240221231637622](./coderwhy-js基础-DOM和BOM.assets/image-20240221231637622-17085285993803.png)
 
       ```
       const body = document.body;
@@ -68,7 +68,7 @@ comment:注释
 
     - 根据某个元素获取另一个元素
 
-      ![image-20240221232546329](.\coderwhy-js基础-DOM和BOM.assets\image-20240221232546329-17085291479594.png)
+      ![image-20240221232546329](./coderwhy-js基础-DOM和BOM.assets/image-20240221232546329-17085291479594.png)
 
       
 
@@ -87,17 +87,17 @@ const tableEl = document.body.xxxxx;
 根据导航获取其他元素
 ```
 
-![image-20240221234907759](.\coderwhy-js基础-DOM和BOM.assets\image-20240221234907759-17085305498915.png)
+![image-20240221234907759](./coderwhy-js基础-DOM和BOM.assets/image-20240221234907759-17085305498915.png)
 
 练习
 
-![image-20240222000042973](.\coderwhy-js基础-DOM和BOM.assets\image-20240222000042973-17085312447936.png)
+![image-20240222000042973](./coderwhy-js基础-DOM和BOM.assets/image-20240222000042973-17085312447936.png)
 
 
 
 ### `form之间的导航
 
-![image-20240221235458710](.\coderwhy-js基础-DOM和BOM.assets\image-20240221235458710.png)
+![image-20240221235458710](./coderwhy-js基础-DOM和BOM.assets/image-20240221235458710.png)
 
 ```
 const formEl = document.body.xxxx;//通过元素获取
@@ -124,7 +124,7 @@ const keyword = doucument.getElementsByCLassName("classname");
 
 ​	document.getElementById(idname)
 
-![image-20240222002709638](.\coderwhy-js基础-DOM和BOM.assets\image-20240222002709638-17085328324087.png)
+![image-20240222002709638](./coderwhy-js基础-DOM和BOM.assets/image-20240222002709638-17085328324087.png)
 
 //最常用的是前两个
 
@@ -151,7 +151,7 @@ const keyword = doucument.getElementsByCLassName("classname");
 
     
 
-  - ![image-20240222003423276](.\coderwhy-js基础-DOM和BOM.assets\image-20240222003423276-17085332648618.png)
+  - ![image-20240222003423276](./coderwhy-js基础-DOM和BOM.assets/image-20240222003423276-17085332648618.png)
 
   - 使用场景:利用其值不同,if或者switch判断对某种类型操作
 
@@ -200,7 +200,7 @@ property:对象中的属性
 
    能获取到对应的值跟类型
 
-   ![image-20240222165825483](.\coderwhy-js基础-DOM和BOM.assets\image-20240222165825483-17085923069682.png)
+   ![image-20240222165825483](./coderwhy-js基础-DOM和BOM.assets/image-20240222165825483-17085923069682.png)
 
    注:property不能操作input在浏览器部分已经更改,推荐使用
 
@@ -214,7 +214,7 @@ property:对象中的属性
 
 操作:
 
-![image-20240222164304984](.\coderwhy-js基础-DOM和BOM.assets\image-20240222164304984-17085913876071.png)
+![image-20240222164304984](./coderwhy-js基础-DOM和BOM.assets/image-20240222164304984-17085913876071.png)
 
 大小写不敏感,获取到的是字符串
 
@@ -244,15 +244,15 @@ class(attributte)对应的className(property)
   boxEl.className = "active";
   ```
 
-  ![image-20240222173143372](.\coderwhy-js基础-DOM和BOM.assets\image-20240222173143372-17085943049143.png)
+  ![image-20240222173143372](./coderwhy-js基础-DOM和BOM.assets/image-20240222173143372-17085943049143.png)
 
 注:class的classList
 
-![image-20240222173819198](.\coderwhy-js基础-DOM和BOM.assets\image-20240222173819198.png)
+![image-20240222173819198](./coderwhy-js基础-DOM和BOM.assets/image-20240222173819198.png)
 
 实战:
 
-![image-20240222173834191](.\coderwhy-js基础-DOM和BOM.assets\image-20240222173834191.png) 
+![image-20240222173834191](./coderwhy-js基础-DOM和BOM.assets/image-20240222173834191.png) 
 
 
 
@@ -260,7 +260,7 @@ style元素的读取:
 
 - 对于内联样式是可以通过Elem.style.xxxx读取的
 - 对于style,css文件中的样式,是读取不到的
-- ![image-20240223144055555](.\coderwhy-js基础-DOM和BOM.assets\image-20240223144055555-17086704578934.png)
+- ![image-20240223144055555](./coderwhy-js基础-DOM和BOM.assets/image-20240223144055555-17086704578934.png)
 
 自定义属性的读取:
 
@@ -311,7 +311,7 @@ box.dataset.自定义属性
   - 先创建一个元素`ducument.creatElement(tag)`
   - 然后将其插入,如下
 
-  ![image-20240223161008841](.\coderwhy-js基础-DOM和BOM.assets\image-20240223161008841-17086758117065.png)
+  ![image-20240223161008841](./coderwhy-js基础-DOM和BOM.assets/image-20240223161008841-17086758117065.png)
 
 - 移除元素
   - `boxEl.remove()`
@@ -320,27 +320,27 @@ box.dataset.自定义属性
 - 克隆元素
   - `boxEl.clone(boolean)`
 
-![image-20240223162604872](.\coderwhy-js基础-DOM和BOM.assets\image-20240223162604872-17086767675306.png)
+![image-20240223162604872](./coderwhy-js基础-DOM和BOM.assets/image-20240223162604872-17086767675306.png)
 
 #### 计数器案例:
 
-![image-20240223170453690](.\coderwhy-js基础-DOM和BOM.assets\image-20240223170453690-17086790958587.png)
+![image-20240223170453690](./coderwhy-js基础-DOM和BOM.assets/image-20240223170453690-17086790958587.png)
 
 
 
 #### 动态计时器案例
 
-![image-20240223201725973](.\coderwhy-js基础-DOM和BOM.assets\image-20240223201725973-170869064729614.png)
+![image-20240223201725973](./coderwhy-js基础-DOM和BOM.assets/image-20240223201725973-170869064729614.png)
 
-![image-20240223201700118](.\coderwhy-js基础-DOM和BOM.assets\image-20240223201700118-170869062290713.png)
+![image-20240223201700118](./coderwhy-js基础-DOM和BOM.assets/image-20240223201700118-170869062290713.png)
 
 
 
 #### 动态倒计时案例
 
-![image-20240225223811752](.\coderwhy-js基础-DOM和BOM.assets\image-20240225223811752-17088718932142.png)
+![image-20240225223811752](./coderwhy-js基础-DOM和BOM.assets/image-20240225223811752-17088718932142.png)
 
-![image-20240225223744546](.\coderwhy-js基础-DOM和BOM.assets\image-20240225223744546-17088718666341.png)
+![image-20240225223744546](./coderwhy-js基础-DOM和BOM.assets/image-20240225223744546-17088718666341.png)
 
 
 
@@ -363,23 +363,23 @@ box.dataset.自定义属性
 
    
 
-2. ![image-20240223172023026](.\coderwhy-js基础-DOM和BOM.assets\image-20240223172023026-17086800246948.png)
+2. ![image-20240223172023026](./coderwhy-js基础-DOM和BOM.assets/image-20240223172023026-17086800246948.png)
 
-3. ![image-20240223172613520](.\coderwhy-js基础-DOM和BOM.assets\image-20240223172613520-17086803751939.png)
+3. ![image-20240223172613520](./coderwhy-js基础-DOM和BOM.assets/image-20240223172613520-17086803751939.png)
 
-   ![image-20240223173034873](.\coderwhy-js基础-DOM和BOM.assets\image-20240223173034873-170868063677010.png)
+   ![image-20240223173034873](./coderwhy-js基础-DOM和BOM.assets/image-20240223173034873-170868063677010.png)
 
    
 
 #### 显示顶部按钮案例
 
-![image-20240223174030224](.\coderwhy-js基础-DOM和BOM.assets\image-20240223174030224-170868123242211.png)
+![image-20240223174030224](./coderwhy-js基础-DOM和BOM.assets/image-20240223174030224-170868123242211.png)
 
 
 
 #### 动态创建按钮的案例
 
-![image-20240223175009578](.\coderwhy-js基础-DOM和BOM.assets\image-20240223175009578-170868181135512.png)
+![image-20240223175009578](./coderwhy-js基础-DOM和BOM.assets/image-20240223175009578-170868181135512.png)
 
 
 
@@ -437,7 +437,7 @@ box.dataset.自定义属性
 
 都监听会按照如下顺序进行:**捕获阶段,目标阶段,冒泡阶段**
 
-![image-20240225231305576](.\coderwhy-js基础-DOM和BOM.assets\image-20240225231305576-17088739879893.png)
+![image-20240225231305576](./coderwhy-js基础-DOM和BOM.assets/image-20240225231305576-17088739879893.png)
 
 
 
@@ -445,9 +445,9 @@ box.dataset.自定义属性
 
 ​	event对象会在传入的事件处理函数回调时,被系统传入;
 
-![image-20240225234433169](.\coderwhy-js基础-DOM和BOM.assets\image-20240225234433169-17088758753554.png)
+![image-20240225234433169](./coderwhy-js基础-DOM和BOM.assets/image-20240225234433169-17088758753554.png)
 
-![image-20240225234556816](.\coderwhy-js基础-DOM和BOM.assets\image-20240225234556816-17088759586435.png)
+![image-20240225234556816](./coderwhy-js基础-DOM和BOM.assets/image-20240225234556816-17088759586435.png)
 
 监听完之后会执行元素默认行为
 
@@ -467,7 +467,7 @@ function(){
 //如下都指向div.El
 ```
 
-![image-20240229235850650](.\coderwhy-js基础-DOM和BOM.assets\image-20240229235850650-17092223317281.png)
+![image-20240229235850650](./coderwhy-js基础-DOM和BOM.assets/image-20240229235850650-17092223317281.png)
 
 
 
@@ -485,7 +485,7 @@ btnEl.removeEventListener();
 //移除函数时需要先封装函数
 ```
 
-![image-20240301002000450](.\coderwhy-js基础-DOM和BOM.assets\image-20240301002000450-17092236024692.png)
+![image-20240301002000450](./coderwhy-js基础-DOM和BOM.assets/image-20240301002000450-17092236024692.png)
 
 派发自定义事件后监听
 
@@ -493,11 +493,11 @@ btnEl.removeEventListener();
 
 #### 事件委托(event delegation)模式
 
-![image-20240301003625387](.\coderwhy-js基础-DOM和BOM.assets\image-20240301003625387-17092245865315.png)
+![image-20240301003625387](./coderwhy-js基础-DOM和BOM.assets/image-20240301003625387-17092245865315.png)
 
-![image-20240301003428212](.\coderwhy-js基础-DOM和BOM.assets\image-20240301003428212-17092244699603.png)
+![image-20240301003428212](./coderwhy-js基础-DOM和BOM.assets/image-20240301003428212-17092244699603.png)
 
-![image-20240301003552466](.\coderwhy-js基础-DOM和BOM.assets\image-20240301003552466-17092245534964.png)
+![image-20240301003552466](./coderwhy-js基础-DOM和BOM.assets/image-20240301003552466-17092245534964.png)
 
 
 
@@ -507,7 +507,7 @@ btnEl.removeEventListener();
 
 ##### 鼠标事件,键盘事件,表单元素事件,Document事件ia,css事件
 
-![image-20240225225734131](.\coderwhy-js基础-DOM和BOM.assets\image-20240225225734131.png)
+![image-20240225225734131](./coderwhy-js基础-DOM和BOM.assets/image-20240225225734131.png)
 
 
 
